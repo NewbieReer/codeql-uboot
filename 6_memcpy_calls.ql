@@ -1,7 +1,6 @@
 import cpp
 
-from FunctionCall call, Function fcn
+from FunctionCall call
 where
-    call.getTarget() = fcn and
-    fcn.hasName("memcpy")
+    call.getTarget().hasName("memcpy")
 select call
